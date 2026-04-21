@@ -1,0 +1,7 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","3280","User should add a product to cart and see it in cart page","chromium","2026-04-21","passed","2026-04-21","","add-to-cart.spec.js","",""
+"","4244","User should add a product to cart and see it in cart page","firefox","2026-04-21","passed","2026-04-21","","add-to-cart.spec.js","",""
+"","3909","User should login successfully with valid credentials","webkit","2026-04-21","passed","2026-04-21","","login.spec.js","",""
+"","3084","User should login successfully with valid credentials","chromium","2026-04-21","passed","2026-04-21","","login.spec.js","",""
+"","4040","User should add a product to cart and see it in cart page","webkit","2026-04-21","passed","2026-04-21","","add-to-cart.spec.js","",""
+"","4114","User should login successfully with valid credentials","firefox","2026-04-21","passed","2026-04-21","","login.spec.js","",""
