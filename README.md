@@ -1,82 +1,149 @@
-# E-commerce Automation Framework (Playwright + SDET Project)
+# 🚀 Playwright E-Commerce Automation Framework
 
 ## 📌 Overview
-This is a scalable end-to-end test automation framework built using Playwright for testing an e-commerce web application.  
-It demonstrates real-world SDET practices including Page Object Model, CI/CD integration, and reporting.
+This project is a **production-style UI test automation framework** built using **Playwright (JavaScript)**.  
+It demonstrates a scalable, maintainable, and CI/CD-integrated testing architecture for an e-commerce web application.
+
+The framework is designed using **Page Object Model (POM)** and follows real-world **SDET best practices** including smoke testing, regression testing, and negative testing strategies.
 
 ---
 
-## 🚀 Tech Stack
-- Playwright (UI Automation)
+## 🧰 Tech Stack
+- Playwright
 - JavaScript (Node.js)
 - Page Object Model (POM)
 - GitHub Actions (CI/CD)
-- Allure Reporting
+- HTML Reporter + Allure Reporting
 
 ---
 
 ## 🏗️ Framework Architecture
-pages/ → Page Object classes (UI actions)
-tests/ → Test cases (business flows)
-utils/ → Reusable helper functions
-config/ → Test data & environment config
+
+```
+ecommerce-automation-framework/
+│
+├── tests/
+│   ├── smoke/
+│   ├── auth/
+│   ├── cart/
+│   ├── checkout/
+│   ├── negative/
+│   ├── regression/
+│
+├── pages/
+│   ├── loginPage.js
+│   ├── productPage.js
+│   ├── cartPage.js
+│   ├── checkoutPage.js
+│
+├── utils/
+├── config/
+├── .github/workflows/
+├── playwright.config.js
+├── test-plan.md
+├── README.md
+```
 
 ---
 
-## 🧪 Features Covered
-- User Login Automation
-- Add to Cart Flow
-- Checkout Simulation
-- Reusable Page Object Model
-- Config-driven test data
-- Screenshot capture on execution
-- CI/CD pipeline using GitHub Actions
-- HTML Reporting using Allure
+## 🧪 Test Strategy
+
+### 🔥 Smoke Tests
+- Login validation
+- Inventory page load
+- Cart access validation
+
+### 🧪 Regression Tests
+- End-to-end checkout flow
+- Cart operations
+- Product interactions
+
+### ❌ Negative Tests
+- Missing checkout fields validation
+- Error message verification
+- Invalid user flows
 
 ---
 
-## ⚙️ How to Run Tests
+## ⚙️ CI/CD Integration
+
+This project uses **GitHub Actions** to automate test execution.
+
+### On every push:
+- Smoke tests run automatically
+
+### On demand / scheduled:
+- Full regression suite execution
+
+---
+
+## 📊 Reporting
+
+- Playwright HTML reports
+- Allure reporting support
+- Screenshots on failure
+- Trace viewer for debugging
+
+---
+
+## ▶️ How to Run Locally
 
 ### Install dependencies
+```bash
 npm install
+```
 
-### Run tests
+### Run all tests
+```bash
 npx playwright test
+```
 
-### Run tests in headed mode
-npx playwright test --headed
+### Run smoke tests only
+```bash
+npx playwright test --grep "@smoke"
+```
 
-### Generate report
-allure generate allure-results --clean -o allure-report
-allure open allure-report
+### Run regression suite
+```bash
+npx playwright test --grep "@regression"
+```
 
----
-
-## 🔁 CI/CD Pipeline
-This project uses GitHub Actions to:
-- Install dependencies
-- Run Playwright tests
-- Execute test suite automatically on push/pull request
-
-Workflow file: `.github/workflows/playwright-tests.yml`
-
----
-
-## 📸 Reporting
-- Allure reports for test execution visualization
-- Screenshots captured on test execution
-- Detailed test execution logs
+### View HTML report
+```bash
+npx playwright show-report
+```
 
 ---
 
-## 👨‍💻 Author
-Automation QA Engineer Portfolio Project
+## 📌 Key Features
+- Scalable Page Object Model architecture
+- Smoke + Regression + Negative test coverage
+- CI/CD integration with GitHub Actions
+- Automatic screenshots on failure
+- Trace debugging support
+- Multi-browser testing support (Chromium, Firefox, WebKit)
 
 ---
 
-## 📌 Key Learning Outcome
-This project demonstrates:
-- Real-world test automation framework design
-- Scalable architecture using POM
-- CI/CD integration
-- Industry-standard QA practices
+## 💼 What This Project Demonstrates
+
+This framework showcases:
+- Real-world QA automation design skills
+- Strong understanding of SDET principles
+- CI/CD pipeline integration
+- Test strategy design (Smoke / Regression / Negative)
+- Clean and maintainable automation architecture
+
+---
+
+## 📈 Author Note
+
+This project was built as a **portfolio-level QA automation framework** to demonstrate production-ready skills in test automation, framework design, and CI/CD integration.
+
+---
+
+## 🚀 Future Enhancements
+- API testing layer integration
+- Dockerized test execution
+- Parallel execution optimization
+- Cloud test execution (BrowserStack / LambdaTest)
